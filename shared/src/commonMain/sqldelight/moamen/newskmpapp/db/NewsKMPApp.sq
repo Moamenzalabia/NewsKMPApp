@@ -1,0 +1,39 @@
+
+CREATE TABLE Article (
+    title TEXT NOT NULL,
+    date TEXT NOT NULL,
+    description TEXT,
+    imageUrl TEXT
+);
+
+insertArticle:
+INSERT INTO Article(title, date, description, imageUrl)
+VALUES(?, ?, ?, ?);
+
+selectAllArticles:
+SELECT Article.*
+FROM Article;
+
+removeAllArticles:
+DELETE FROM Article;
+
+CREATE TABLE Category (
+    id TEXT NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    url TEXT NOT NULL,
+    category TEXT NOT NULL,
+    language TEXT NOT NULL,
+    country TEXT NOT NULL
+);
+
+insertCategory:
+INSERT INTO Category(id, name, description, url, category, language, country)
+VALUES(?, ?, ?, ?, ?, ?, ?);
+
+selectAllCategories:
+SELECT Category.*
+FROM Category;
+
+removeAllCategories:
+DELETE FROM Category;
